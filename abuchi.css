@@ -1,0 +1,15 @@
+body {
+ background-image: url("https://t3.ftcdn.net/jpg/06/26/56/88/360_F_626568852_oN1XAr7zDyBadjbkmYA9ZPpwFTFl2NYP.jpg");
+ background-color: #ccc;
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: white;
+ 
+}
+
+.container{
+ display: grid;
+ align-items: center;
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 40px;
+}

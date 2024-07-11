@@ -1,0 +1,14 @@
+body {
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzjo9O3NLZDcj1jbv4S7gvBvWY1jZn_EyDow&s");
+ background-color: #ccc;
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: white;
+ 
+}
+.container{
+ display: grid;
+ align-items: center;
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 40px;
+

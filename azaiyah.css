@@ -1,0 +1,20 @@
+body{
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpAt4ZqhfH1npCK9n8LOB75NuTYWfk7OjUAw&s");
+background-color: #ccc;
+}
+ 
+ .Resume-button{
+   background-color: purple;
+   color: white;
+   border: none;
+   width: 80px;
+   height: 20px;
+   border-radius: 22px;
+ }
+ 
+.container{
+ display: grid;
+ align-items: center;
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 40px;
+}
