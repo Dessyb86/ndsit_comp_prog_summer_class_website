@@ -4,6 +4,28 @@
 <meta charset="utf-8"> 
 <title>NDSIT Summer School 2024: Computer Programming 1</title>
 <link rel="stylesheet" href="styles.css"> 
+	    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"> 
+    </script> 
+    <script> 
+        var mainApp = angular.module("mainApp", []); 
+        mainApp.filter('greet', function () { 
+            return function (input) { 
+                if (input < 12) { 
+                    return 'Good Morning'; 
+                } 
+                else if (input >= 12 && input < 15) { 
+                    return 'Good Afternoon'; 
+                } 
+                else if (input >= 15 && input < 19) { 
+                    return 'Good Evening'; 
+                } 
+                else if (input >= 18 && input < 25) { 
+                    return 'Good Night'; 
+                } 
+            }; 
+        }); 
+    </script> 
 </head>
 <body ng-app="mainApp">
 <div class="about-section">
@@ -166,24 +188,23 @@
     </div>
   </div>
 </div>
-    <h1>The current date and time is:</h1>
-    <span id="datetime"></span>
-
-    <script>
-      // create a function to update the date and time
-      function updateDateTime() {
-        // create a new `Date` object
-        const now = new Date();
-
-        // get the current date and time as a string
-        const currentDateTime = now.toLocaleString();
-
-        // update the `textContent` property of the `span` element with the `id` of `datetime`
-        document.querySelector('#datetime').textContent = currentDateTime;
-      }
-
-      // call the `updateDateTime` function every second
-      setInterval(updateDateTime, 1000);
-    </script>
+    <h3> 
+        What time is currently?
+    </h3> 
+    <form name="f1"> 
+        Enter 24 hours time in number :  
+        <input type="number" 
+               ng-model="value" 
+               name="n1" 
+               ng-min="1" 
+               ng-max="24"><br> 
+        <span>{{value|greet}}</span> 
+    </form> 
+    <p ng-if="f1.n1.$error.max"> 
+        number must be less than 25 
+    </p> 
+    <p ng-if="f1.n1.$error.min"> 
+        number must be greater than 0 
+    </p> 
 </body>
 </html>
